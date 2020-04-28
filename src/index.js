@@ -8,11 +8,19 @@ import { Provider } from "react-redux";
 // Store
 import configureStore from "./store/configureStore";
 // Actions
+import { addShape } from "./actions/shapes";
 
 // Selector
 
 // Store config
 const store = configureStore();
+
+// Dispatch
+const firstShape = store.dispatch(
+  addShape({ sideOne: 5, sideTwo: 5, sideThree: 5, sideFour: 5 })
+);
+
+console.log(firstShape);
 
 const providerRender = (
   <Provider store={store}>
