@@ -9,22 +9,17 @@ import { Provider } from "react-redux";
 import configureStore from "./store/configureStore";
 // Actions
 import { addShape } from "./actions/shapes";
-
 // Selector
-
+import sortShapes from "./selectors/shapes";
 // Store config
 const store = configureStore();
-
 // Dispatch
-const firstShape = store.dispatch(
-  addShape({ sideOne: 5, sideTwo: 5, sideThree: 5, sideFour: 5 })
-);
+store.dispatch(addShape({ sideOne: 5, sideTwo: 5, sideThree: 5 }));
+store.dispatch(addShape({ sideOne: 3, sideTwo: 3, sideThree: 3, sideFour: 3 }));
+// State
+const state = store.getState();
 
-const secondShape = store.dispatch(
-  addShape({ sideOne: 3, sideTwo: 3, sideThree: 3 })
-);
-
-console.log(firstShape);
+// const sortedShapes = sortShapes(state.shapes, state.filters);
 
 const providerRender = (
   <Provider store={store}>

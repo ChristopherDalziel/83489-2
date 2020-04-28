@@ -1,5 +1,3 @@
-import { v4 as uuidv4 } from "uuid";
-
 export const addShape = ({
   sideOne = "",
   sideTwo = "",
@@ -8,7 +6,6 @@ export const addShape = ({
 } = {}) => ({
   type: "ADD_SHAPE",
   shape: {
-    id: uuidv4(),
     sideOne,
     sideTwo,
     sideThree,
