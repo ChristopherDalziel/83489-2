@@ -10,9 +10,9 @@ class App extends React.Component {
     sideFour: "",
   };
 
-  addShape = () => {};
+  // addShape = () => {};
 
-  sortShape = () => {};
+  // sortShape = () => {};
 
   render() {
     return (

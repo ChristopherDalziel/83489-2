@@ -19,7 +19,7 @@ store.dispatch(addShape({ sideOne: 3, sideTwo: 3, sideThree: 3, sideFour: 3 }));
 // State
 const state = store.getState();
 
-// const sortedShapes = sortShapes(state.shapes, state.filters);
+const sortedShapes = sortShapes(state.shapes, state.filters);
 
 const providerRender = (
   <Provider store={store}>

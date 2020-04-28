@@ -1,5 +1,5 @@
 const filterReducerDefaultState = {
-  sortBy: "triangles",
+  sortBy: "",
 };
 
 const filterReducer = (state = filterReducerDefaultState, action) => {
