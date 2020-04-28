@@ -20,6 +20,10 @@ const firstShape = store.dispatch(
   addShape({ sideOne: 5, sideTwo: 5, sideThree: 5, sideFour: 5 })
 );
 
+const secondShape = store.dispatch(
+  addShape({ sideOne: 3, sideTwo: 3, sideThree: 3 })
+);
+
 console.log(firstShape);
 
 const providerRender = (

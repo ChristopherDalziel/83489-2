@@ -7,7 +7,7 @@ export const addShape = ({
   sideFour = "",
 } = {}) => ({
   type: "ADD_SHAPE",
-  expense: {
+  shape: {
     id: uuidv4(),
     sideOne,
     sideTwo,
