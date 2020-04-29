@@ -14,12 +14,12 @@ import sortShapes from "./selectors/shapes";
 // Store config
 const store = configureStore();
 // Dispatch
-store.dispatch(addShape({ sideOne: 5, sideTwo: 5, sideThree: 5 }));
+const test = store.dispatch(addShape({ sideOne: 5, sideTwo: 5, sideThree: 5 }));
 store.dispatch(addShape({ sideOne: 3, sideTwo: 3, sideThree: 3, sideFour: 3 }));
 // State
 const state = store.getState();
 
-const sortedShapes = sortShapes(state.shapes, state.filters);
+sortShapes(state.shapes, state.filters);
 
 const providerRender = (
   <Provider store={store}>

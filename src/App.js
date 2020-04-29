@@ -1,6 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
-import { sortByTriangles, sortByCircles } from "./actions/filters";
+import ShapesList from "./components/ShapesList";
+import ShapesListFilters from "./components/ShapesListFilters";
 
 class App extends React.Component {
   state = {
@@ -10,27 +11,12 @@ class App extends React.Component {
     sideFour: "",
   };
 
-  // addShape = () => {};
-
-  // sortShape = () => {};
-
   render() {
     return (
       <div>
-        <h1>Part 2</h1>
-        <select
-          value={this.props.filters.sortBy}
-          onChange={(e) => {
-            if (e.target.value === "triangles") {
-              return this.props.dispatch(sortByTriangles());
-            } else if (e.target.value === "circles") {
-              return this.props.dispatch(sortByCircles());
-            }
-          }}
-        >
-          <option value="triangles">triangles</option>
-          <option value="circles">circles</option>
-        </select>
+        <h1>Unnamed Project</h1>
+        <ShapesListFilters />
+        <ShapesList />
       </div>
     );
   }
