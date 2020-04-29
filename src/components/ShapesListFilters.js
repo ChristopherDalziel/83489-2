@@ -1,6 +1,10 @@
 import React from "react";
 import { connect } from "react-redux";
-import { sortByTriangles, sortByCircles } from "../actions/filters";
+import {
+  sortByTriangles,
+  sortByCircles,
+  sortByQuadrilaterals,
+} from "../actions/filters";
 
 class ShapesListFilters extends React.Component {
   render() {
@@ -13,11 +17,14 @@ class ShapesListFilters extends React.Component {
               return this.props.dispatch(sortByTriangles());
             } else if (e.target.value === "circles") {
               return this.props.dispatch(sortByCircles());
+            } else if (e.target.value === "quadrilaterals") {
+              return this.props.dispatch(sortByQuadrilaterals());
             }
           }}
         >
           <option value="triangles">triangles</option>
           <option value="circles">circles</option>
+          <option value="quadrilaterals">quadrilaterals</option>
         </select>
       </div>
     );

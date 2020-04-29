@@ -14,6 +14,11 @@ const filterReducer = (state = filterReducerDefaultState, action) => {
         ...state,
         sortBy: "circles",
       };
+    case "SORT_BY_QUADRILATERALS":
+      return {
+        ...state,
+        sortBy: "quadrilaterals",
+      };
     default:
       return state;
   }

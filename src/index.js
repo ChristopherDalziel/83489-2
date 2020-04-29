@@ -7,15 +7,25 @@ import { Provider } from "react-redux";
 
 // Store
 import configureStore from "./store/configureStore";
+
 // Actions
 import { addShape } from "./actions/shapes";
+
 // Selector
 import sortShapes from "./selectors/shapes";
+
 // Store config
 const store = configureStore();
+
 // Dispatch
-const test = store.dispatch(addShape({ sideOne: 5, sideTwo: 5, sideThree: 5 }));
+
+// Circles
+store.dispatch(addShape({ sideOne: 5 }));
+// Triangles
+store.dispatch(addShape({ sideOne: 5, sideTwo: 5, sideThree: 5 }));
+// Quadrilaterals
 store.dispatch(addShape({ sideOne: 3, sideTwo: 3, sideThree: 3, sideFour: 3 }));
+
 // State
 const state = store.getState();
 

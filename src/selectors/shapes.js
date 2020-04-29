@@ -1,21 +1,13 @@
-const removeEmpty = (obj) => {
-  Object.keys(obj).forEach(
-    (key) => !obj[key] && obj[key] !== undefined && delete obj[key]
-  );
-  return console.log(obj);
+const expectedSides = {
+  circles: 1,
+  triangles: 3,
+  quadrilaterals: 4,
 };
 
 const sortShapes = (shapes, { sortBy }) => {
   return shapes.filter((shape) => {
-    removeEmpty(shape);
-
-    if (sortBy === "triangles" && Object.values(shape).length === 3) {
-      console.log("must be triangle");
-    } else if (sortBy === "triangles" && Object.values(shape).length !== 3) {
-      console.log("this must not be a triangle");
-    } else if (sortBy === "circles") {
-      console.log("working");
-    }
+    const sides = Object.values(shape).filter((side) => side).length;
+    return sides === expectedSides[sortBy];
   });
 };
 
