@@ -1,37 +1,40 @@
 import React from "react";
-import { Circle, Triangle, Rectangle } from "react-shapes";
+import styled from "@emotion/styled";
 
 const ShapeListItem = ({ sideOne, sideTwo, sideThree, sideFour }) => {
+  const Circle = styled.div`
+    margin: 20px;
+    width: ${sideOne * 10}px;
+    height: ${sideOne * 10}px;
+    background: black;
+    border-radius: 50%;
+  `;
+
+  const Triangle = styled.div`
+    margin: 20px;
+    width: 0;
+    height: 0;
+    border-bottom: ${sideOne * 10}px solid black;
+    border-left: ${sideTwo * 10}px solid transparent;
+    border-right: ${sideThree * 10}px solid transparent;
+  `;
+
+  const Quadrilateral = styled.div`
+    margin: 20px;
+    width: ${sideFour * 10}px;
+    height: 0;
+    border-bottom: ${sideOne * 10}px solid black;
+    border-left: ${sideTwo * 10}px solid transparent;
+    border-right: ${sideThree * 10}px solid transparent;
+  `;
+
   return (
     <div>
-      <p>
-        {sideOne && !sideTwo && (
-          <Circle
-            r={sideOne * 10}
-            fill={{ color: "#2409ba" }}
-            stroke={{ color: "#E65243" }}
-            strokeWidth={3}
-          />
-        )}
-        {sideTwo && sideTwo && sideThree && !sideFour && (
-          <Triangle
-            width={sideOne * 10}
-            height={sideTwo * 10}
-            fill={{ color: "#2409ba" }}
-            stroke={{ color: "#E65243" }}
-            strokeWidth={3}
-          />
-        )}
-        {sideTwo && sideTwo && sideThree && sideFour && (
-          <Rectangle
-            width={sideOne * 10}
-            height={sideTwo * 10}
-            fill={{ color: "#2409ba" }}
-            stroke={{ color: "#E65243" }}
-            strokeWidth={3}
-          />
-        )}
-      </p>
+      <div>
+        {sideOne && !sideTwo && <Circle />}
+        {sideTwo && sideTwo && sideThree && !sideFour && <Triangle />}
+        {sideTwo && sideTwo && sideThree && sideFour && <Quadrilateral />}
+      </div>
     </div>
   );
 };
