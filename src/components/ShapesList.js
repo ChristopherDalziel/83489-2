@@ -18,8 +18,8 @@ const ShapeList = (props) => {
     <Body>
       <>
         <H2>Sorted Shapes</H2>
-        {props.shapes.map((shape) => {
-          return <ShapeListItem {...shape} />;
+        {props.shapes.map((shape, index) => {
+          return <ShapeListItem key={index} {...shape} />;
         })}
       </>
     </Body>
