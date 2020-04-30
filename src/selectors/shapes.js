@@ -1,7 +1,7 @@
 const expectedSides = {
-  circles: 1,
-  triangles: 3,
-  quadrilaterals: 4,
+  Circles: 1,
+  Triangles: 3,
+  Quadrilaterals: 4,
 };
 
 const sortShapes = (shapes, { sortBy }) => {

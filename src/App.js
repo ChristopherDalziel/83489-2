@@ -2,6 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 import ShapesList from "./components/ShapesList";
 import ShapesListFilters from "./components/ShapesListFilters";
+import Header from "./components/Header";
 
 class App extends React.Component {
   state = {
@@ -14,7 +15,7 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <h1>Unnamed Project</h1>
+        <Header />
         <ShapesListFilters />
         <ShapesList />
       </div>

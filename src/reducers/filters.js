@@ -7,17 +7,17 @@ const filterReducer = (state = filterReducerDefaultState, action) => {
     case "SORT_BY_TRIANGLES":
       return {
         ...state,
-        sortBy: "triangles",
+        sortBy: "Triangles",
       };
     case "SORT_BY_CIRCLES":
       return {
         ...state,
-        sortBy: "circles",
+        sortBy: "Circles",
       };
     case "SORT_BY_QUADRILATERALS":
       return {
         ...state,
-        sortBy: "quadrilaterals",
+        sortBy: "Quadrilaterals",
       };
     default:
       return state;
