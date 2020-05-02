@@ -2,13 +2,10 @@ import React from "react";
 import styled from "@emotion/styled";
 import { Stage, Layer, Shape } from "react-konva";
 
-// import GonnaBeMyShape from "../components/Shape";
-
 const ShapeListItem = ({ sideOne, sideTwo, sideThree, sideFour }) => {
   const Quadrilateral = () => {
-    console.log(sideOne);
     return (
-      <Stage width={window.innerWidth} height={window.innerHeight}>
+      <Stage width={window.innerWidth} height={600}>
         <Layer>
           <Shape
             sceneFunc={(context, shape) => {
@@ -30,6 +27,29 @@ const ShapeListItem = ({ sideOne, sideTwo, sideThree, sideFour }) => {
       </Stage>
     );
   };
+
+  // const Triangle = ({ sideOne, sideTwo, sideThree }) => {
+  //   return (
+  //     <Stage width={window.innerWidth} height={600}>
+  //       <Layer>
+  //         <Shape
+  //           sceneFunc={(context, shape) => {
+  //             context.beginPath();
+  //             context.moveTo(`${sideOne}`, `${sideTwo}`);
+  //             context.lineTo(`${sideTwo}`, `${sideThree}`);
+  //             context.closePath();
+
+  //             context.fillStrokeShape(shape);
+  //           }}
+  //           fill="#00D2FF"
+  //           stroke="black"
+  //           strokeWidth={4}
+  //         />
+  //       </Layer>
+  //     </Stage>
+  //   );
+  // };
+
   const Circle = styled.div`
     margin: 20px;
     width: ${sideOne * 10}px;
@@ -46,6 +66,11 @@ const ShapeListItem = ({ sideOne, sideTwo, sideThree, sideFour }) => {
     border-left: ${sideTwo * 10}px solid transparent;
     border-right: ${sideThree * 10}px solid transparent;
   `;
+
+  // const BodyDiv = styled.div`
+  //   height: 100vh;
+  //   overflow: scroll;
+  // `;
 
   // const Quadrilateral = styled.div`
   //   margin: 20px;
@@ -64,12 +89,10 @@ const ShapeListItem = ({ sideOne, sideTwo, sideThree, sideFour }) => {
 
   return (
     <div>
-      <div>
-        {sideOne && !sideTwo && <Circle />}
-        {sideTwo && sideTwo && sideThree && !sideFour && <Triangle />}
-        {sideTwo && sideTwo && sideThree && sideFour && <Quadrilateral />}
-        {/* {sideOne && sideTwo && sideThree && sideFour === sideOne && <Square />} */}
-      </div>
+      {sideOne && !sideTwo && <Circle />}
+      {sideTwo && sideTwo && sideThree && !sideFour && <Triangle />}
+      {sideTwo && sideTwo && sideThree && sideFour && <Quadrilateral />}
+      {/* {sideOne && sideTwo && sideThree && sideFour === sideOne && <Square />} */}
     </div>
   );
 };
