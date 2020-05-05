@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import ShapesList from "./components/ShapesList";
 import ShapesListFilters from "./components/ShapesListFilters";
 import Header from "./components/Header";
-import ShapeForm from "./components/ShapeForm";
+import AddShapeDiv from "./components/AddShapeDiv";
 
 class App extends React.Component {
   state = {
@@ -13,11 +13,11 @@ class App extends React.Component {
     sideFour: "",
   };
 
-  render() {
+  render(props) {
     return (
       <div>
         <Header />
-        <ShapeForm />
+        <AddShapeDiv />
         <ShapesListFilters />
         <ShapesList />
       </div>
@@ -30,5 +30,9 @@ const mapStateToProps = (state) => {
     filters: state.filters,
   };
 };
+
+// const mapDispatchToProps = (dispatch) => {
+//   return {};
+// };
 
 export default connect(mapStateToProps)(App);
