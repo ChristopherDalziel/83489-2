@@ -53,6 +53,14 @@ export default class ShapeForm extends React.Component {
       this.setState(() => ({
         error: "Please provide at least side one",
       }));
+    } else if (
+      this.state.sideOne &&
+      this.state.sideTwo &&
+      !this.state.sideThree
+    ) {
+      this.setState(() => ({
+        error: "Please provide a shape with more or less than 2 sides",
+      }));
     } else {
       this.setState(() => ({ error: "" }));
       this.props.onSubmit({
