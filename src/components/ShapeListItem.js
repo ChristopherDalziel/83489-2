@@ -3,9 +3,18 @@ import styled from "@emotion/styled";
 import { Stage, Layer, Shape } from "react-konva";
 
 const ShapeListItem = ({ sideOne, sideTwo, sideThree, sideFour }) => {
+  const heightCalc = () => {
+    const longestSide = Math.max(sideOne, sideTwo, sideThree, sideFour);
+    if (longestSide < 50) {
+      return 30;
+    } else {
+      return longestSide;
+    }
+  };
+
   const Quadrilateral = () => {
     return (
-      <Stage width={window.innerWidth} height={600}>
+      <Stage width={window.innerWidth} height={heightCalc() * 5}>
         <Layer>
           <Shape
             sceneFunc={(context, shape) => {
@@ -14,9 +23,9 @@ const ShapeListItem = ({ sideOne, sideTwo, sideThree, sideFour }) => {
               context.lineTo(`${sideOne * 5}`, 100); // 1st value = top line
               context.lineTo(`${sideThree * 5}`, `${sideTwo * 5}`); // 1st value = bottom line, 2nd value = right line
               context.lineTo(100, `${sideFour * 5}`); // 2nd value = left line
-              context.lineTo(100, 100); // close shape
+              context.lineTo(100, 100);
               context.closePath();
-              // (!) Konva specific method, it is very important
+
               context.fillStrokeShape(shape);
             }}
             fill="#00D2FF"
