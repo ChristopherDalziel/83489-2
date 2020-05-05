@@ -84,16 +84,19 @@ export default class ShapeForm extends React.Component {
             placeholder="Side One"
           ></input>
           <input
+            disabled={!this.state.sideOne ? true : false}
             onChange={this.onSideTwoChange}
             value={this.state.sideTwo}
             placeholder="Side Two"
           ></input>
           <input
+            disabled={!this.state.sideTwo ? true : false}
             onChange={this.onSideThreeChange}
             value={this.state.sideThree}
             placeholder="Side Three"
           ></input>
           <input
+            disabled={!this.state.sideThree ? true : false}
             onChange={this.onSideFourChange}
             value={this.state.sideFour}
             placeholder="Side Four"
