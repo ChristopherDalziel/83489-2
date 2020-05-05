@@ -90,18 +90,11 @@ const ShapeListItem = ({ sideOne, sideTwo, sideThree, sideFour }) => {
   //   border-right: ${sideThree * 10}px solid transparent;
   // `;
 
-  // const Square = styled.div`
-  //   height: ${sideOne * 10}px;
-  //   width: ${sideOne * 10}px;
-  //   background: black;
-  // `;
-
   return (
     <div>
       {sideOne && !sideTwo && <Circle />}
       {sideTwo && sideTwo && sideThree && !sideFour && <Triangle />}
       {sideTwo && sideTwo && sideThree && sideFour && <Quadrilateral />}
-      {/* {sideOne && sideTwo && sideThree && sideFour === sideOne && <Square />} */}
     </div>
   );
 };
