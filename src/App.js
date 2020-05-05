@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import ShapesList from "./components/ShapesList";
 import ShapesListFilters from "./components/ShapesListFilters";
 import Header from "./components/Header";
+import ShapeForm from "./components/ShapeForm";
 
 class App extends React.Component {
   state = {
@@ -16,6 +17,7 @@ class App extends React.Component {
     return (
       <div>
         <Header />
+        <ShapeForm />
         <ShapesListFilters />
         <ShapesList />
       </div>
