@@ -20,30 +20,39 @@ export default class ShapeForm extends React.Component {
 
   onSideOneChange = (e) => {
     const sideOne = e.target.value;
-    this.setState(() => {
-      return { sideOne };
-    });
+    if (!sideOne || sideOne.match(/^\d{1,}(\.\d{0,2})?$/)) {
+      this.setState(() => {
+        return { sideOne };
+      });
+    }
   };
 
   onSideTwoChange = (e) => {
     const sideTwo = e.target.value;
-    this.setState(() => {
-      return { sideTwo };
-    });
+    if (!sideTwo || sideTwo.match(/^\d{1,}(\.\d{0,2})?$/)) {
+      this.setState(() => {
+        return { sideTwo };
+      });
+    }
   };
 
   onSideThreeChange = (e) => {
     const sideThree = e.target.value;
-    this.setState(() => {
-      return { sideThree };
-    });
+    if (!sideThree || sideThree.match(/^\d{1,}(\.\d{0,2})?$/)) {
+      this.setState(() => {
+        return { sideThree };
+      });
+    }
   };
 
   onSideFourChange = (e) => {
     const sideFour = e.target.value;
-    this.setState(() => {
-      return { sideFour };
-    });
+
+    if (!sideFour || sideFour.match(/^\d{1,}(\.\d{0,2})?$/)) {
+      this.setState(() => {
+        return { sideFour };
+      });
+    }
   };
 
   onSubmit = (e) => {
@@ -51,7 +60,7 @@ export default class ShapeForm extends React.Component {
 
     if (!this.state.sideOne) {
       this.setState(() => ({
-        error: "Please provide at least side one",
+        error: "Please provide at least 'Side One' ",
       }));
     } else if (
       this.state.sideOne &&
