@@ -28,9 +28,9 @@ const ShapeListItem = ({ sideOne, sideTwo, sideThree, sideFour }) => {
 
               context.fillStrokeShape(shape);
             }}
-            fill="#00D2FF"
+            fill="black"
             stroke="black"
-            strokeWidth={4}
+            strokeWidth={2}
           />
         </Layer>
       </Stage>

@@ -22,12 +22,6 @@ const Footer = () => {
         class="fab fa-github-square socials"
         id="footerLink"
       ></a>
-      <a
-        target="_blank"
-        href="https://www.linkedin.com/in/christopher-dalziel-129427187/"
-        class="fab fa-linkedin socials"
-        id="footerLink"
-      ></a>
     </FooterDiv>
   );
 };
