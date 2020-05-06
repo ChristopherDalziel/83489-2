@@ -76,20 +76,6 @@ const ShapeListItem = ({ sideOne, sideTwo, sideThree, sideFour }) => {
     border-right: ${sideThree * 10}px solid transparent;
   `;
 
-  // const BodyDiv = styled.div`
-  //   height: 100vh;
-  //   overflow: scroll;
-  // `;
-
-  // const Quadrilateral = styled.div`
-  //   margin: 20px;
-  //   width: ${sideFour * 10}px;
-  //   height: 0;
-  //   border-bottom: ${sideOne * 10}px solid black;
-  //   border-left: ${sideTwo * 10}px solid transparent;
-  //   border-right: ${sideThree * 10}px solid transparent;
-  // `;
-
   return (
     <div>
       {sideOne && !sideTwo && <Circle />}
