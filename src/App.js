@@ -4,6 +4,14 @@ import ShapesList from "./components/ShapesList";
 import ShapesListFilters from "./components/ShapesListFilters";
 import Header from "./components/Header";
 import AddShapeDiv from "./components/AddShapeDiv";
+import Footer from "./components/Footer";
+import styled from "@emotion/styled";
+
+const ApplicationDiv = styled.div`
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+`;
 
 class App extends React.Component {
   state = {
@@ -15,12 +23,13 @@ class App extends React.Component {
 
   render(props) {
     return (
-      <div>
+      <ApplicationDiv>
         <Header />
         <AddShapeDiv />
         <ShapesListFilters />
         <ShapesList />
-      </div>
+        <Footer />
+      </ApplicationDiv>
     );
   }
 }
