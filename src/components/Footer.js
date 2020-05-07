@@ -3,7 +3,7 @@ import styled from "@emotion/styled";
 
 const FooterDiv = styled.footer`
   margin-top: auto;
-  height: 5vh;
+  height: 6vh;
   background-color: #e63846;
   border-radius: 100px 0px 0px 0px;
   display: flex;
