@@ -1,5 +1,113 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Should render error for invalid form submission 1`] = `
+<Styled(div)>
+  <form
+    onSubmit={[Function]}
+  >
+    <input
+      autoFocus={true}
+      onChange={[Function]}
+      placeholder="Side One"
+      value=""
+    />
+    <input
+      disabled={true}
+      onChange={[Function]}
+      placeholder="Side Two"
+      value=""
+    />
+    <input
+      disabled={true}
+      onChange={[Function]}
+      placeholder="Side Three"
+      value=""
+    />
+    <input
+      disabled={true}
+      onChange={[Function]}
+      placeholder="Side Four"
+      value=""
+    />
+    <button>
+      Create new shape
+    </button>
+  </form>
+</Styled(div)>
+`;
+
+exports[`Should render error for invalid form submission 2`] = `
+<Styled(div)>
+  <form
+    onSubmit={[Function]}
+  >
+    <p>
+      Please provide at least 'Side One' 
+    </p>
+    <input
+      autoFocus={true}
+      onChange={[Function]}
+      placeholder="Side One"
+      value=""
+    />
+    <input
+      disabled={true}
+      onChange={[Function]}
+      placeholder="Side Two"
+      value=""
+    />
+    <input
+      disabled={true}
+      onChange={[Function]}
+      placeholder="Side Three"
+      value=""
+    />
+    <input
+      disabled={true}
+      onChange={[Function]}
+      placeholder="Side Four"
+      value=""
+    />
+    <button>
+      Create new shape
+    </button>
+  </form>
+</Styled(div)>
+`;
+
+exports[`Should render form with shape data 1`] = `
+<Styled(div)>
+  <form
+    onSubmit={[Function]}
+  >
+    <input
+      autoFocus={true}
+      onChange={[Function]}
+      placeholder="Side One"
+      value={10}
+    />
+    <input
+      disabled={false}
+      onChange={[Function]}
+      placeholder="Side Two"
+    />
+    <input
+      disabled={true}
+      onChange={[Function]}
+      placeholder="Side Three"
+    />
+    <input
+      disabled={true}
+      onChange={[Function]}
+      placeholder="Side Four"
+    />
+    <button>
+      Create new shape
+    </button>
+  </form>
+</Styled(div)>
+`;
+
 exports[`Should render shape form correctly 1`] = `
 <Styled(div)>
   <form
