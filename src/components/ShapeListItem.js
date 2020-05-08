@@ -37,28 +37,6 @@ const ShapeListItem = ({ sideOne, sideTwo, sideThree, sideFour }) => {
     );
   };
 
-  // const Triangle = ({ sideOne, sideTwo, sideThree }) => {
-  //   return (
-  //     <Stage width={window.innerWidth} height={600}>
-  //       <Layer>
-  //         <Shape
-  //           sceneFunc={(context, shape) => {
-  //             context.beginPath();
-  //             context.moveTo(`${sideOne}`, `${sideTwo}`);
-  //             context.lineTo(`${sideTwo}`, `${sideThree}`);
-  //             context.closePath();
-
-  //             context.fillStrokeShape(shape);
-  //           }}
-  //           fill="#00D2FF"
-  //           stroke="black"
-  //           strokeWidth={4}
-  //         />
-  //       </Layer>
-  //     </Stage>
-  //   );
-  // };
-
   const Circle = styled.div`
     margin: 20px;
     width: ${sideOne * 10}px;
