@@ -13,15 +13,23 @@ const H2 = styled.h2`
   color: #e63846;
 `;
 
+const NoShapesMessage = styled.p`
+  color: #e63846;
+`;
+
 export const ShapeList = (props) => {
   return (
     <Body>
-      <>
-        <H2>Sorted Shapes</H2>
-        {props.shapes.map((shape, index) => {
-          return <ShapeListItem key={index} {...shape} />;
-        })}
-      </>
+      {props.shapes.length === 0 ? (
+        <NoShapesMessage>No shapes to display</NoShapesMessage>
+      ) : (
+        <>
+          <H2>Sorted Shapes</H2>
+          {props.shapes.map((shape, index) => {
+            return <ShapeListItem key={index} {...shape} />;
+          })}
+        </>
+      )}
     </Body>
   );
 };
