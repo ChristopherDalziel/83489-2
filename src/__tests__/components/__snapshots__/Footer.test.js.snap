@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should render footer correctly 1`] = `
+<Styled(footer)>
+  <a
+    class="fab fa-github-square socials"
+    href="https://github.com/ChristopherDalziel/83489-2"
+    id="footerLink"
+    target="_blank"
+  />
+</Styled(footer)>
+`;
