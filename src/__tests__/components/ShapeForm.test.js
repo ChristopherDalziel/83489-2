@@ -106,3 +106,18 @@ test("Should not set sideFour if input is invalid", () => {
   wrapper.find("input").at(3).simulate("change", { target: { value } });
   expect(wrapper.state("sideFour")).toBe("");
 });
+
+test("Should call onSubmit prop for validation", () => {
+  const onSubmitSpy = jest.fn();
+  const wrapper = shallow(
+    <ShapeForm shape={shapes[2]} onSubmit={onSubmitSpy} />
+  );
+  wrapper.find("form").simulate("submit", { preventDefault: () => {} });
+  expect(wrapper.state("error")).toBe("");
+  expect(onSubmitSpy).toHaveBeenLastCalledWith({
+    sideOne: shapes[2].sideOne,
+    sideTwo: shapes[2].sideTwo,
+    sideThree: shapes[2].sideThree,
+    sideFour: shapes[2].sideFour,
+  });
+});
