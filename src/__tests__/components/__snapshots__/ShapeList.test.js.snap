@@ -1,5 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Should render shape list with empty message 1`] = `
+<Styled(div)>
+  <Styled(p)>
+    No shapes to display
+  </Styled(p)>
+</Styled(div)>
+`;
+
 exports[`Should render shape list with shapes 1`] = `
 <Styled(div)>
   <Styled(h2)>

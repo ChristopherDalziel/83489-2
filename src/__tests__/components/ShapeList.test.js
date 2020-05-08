@@ -12,4 +12,5 @@ test("Should render shape list with shapes", () => {
 
 test("Should render shape list with empty message", () => {
   const wrapper = shallow(<ShapeList shapes={[]} />);
+  expect(toJSON(wrapper)).toMatchSnapshot();
 });
