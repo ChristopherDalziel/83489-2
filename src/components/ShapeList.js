@@ -4,7 +4,7 @@ import styled from "@emotion/styled";
 import ShapeListItem from "./ShapeListItem";
 import sortShapes from "../selectors/shapes";
 
-const Body = styled.div`
+const ShapeListBody = styled.div`
   margin: 10px;
   overflow: scroll;
 `;
@@ -19,7 +19,7 @@ const NoShapesMessage = styled.p`
 
 export const ShapeList = (props) => {
   return (
-    <Body>
+    <ShapeListBody>
       {props.shapes.length === 0 ? (
         <NoShapesMessage>No shapes to display</NoShapesMessage>
       ) : (
@@ -30,7 +30,7 @@ export const ShapeList = (props) => {
           })}
         </>
       )}
-    </Body>
+    </ShapeListBody>
   );
 };
 
