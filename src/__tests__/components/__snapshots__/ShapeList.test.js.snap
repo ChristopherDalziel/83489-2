@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should render shape list with shapes 1`] = `
+<Styled(div)>
+  <Styled(h2)>
+    Sorted Shapes
+  </Styled(h2)>
+  <ShapeListItem
+    key="0"
+    sideOne={10}
+  />
+  <ShapeListItem
+    key="1"
+    sideOne={5}
+    sideThree={5}
+    sideTwo={5}
+  />
+  <ShapeListItem
+    key="2"
+    sideFour={10}
+    sideOne={5}
+    sideThree={5}
+    sideTwo={10}
+  />
+</Styled(div)>
+`;

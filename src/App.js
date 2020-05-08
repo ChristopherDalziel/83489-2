@@ -1,7 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
-import ShapesList from "./components/ShapesList";
-import ShapesListFilters from "./components/ShapesListFilters";
+import ShapeList from "./components/ShapeList";
+import ShapeListFilters from "./components/ShapeListFilters";
 import Header from "./components/Header";
 import AddShapeDiv from "./components/AddShapeDiv";
 import Footer from "./components/Footer";
@@ -26,8 +26,8 @@ class App extends React.Component {
       <ApplicationDiv>
         <Header />
         <AddShapeDiv />
-        <ShapesListFilters />
-        <ShapesList />
+        <ShapeListFilters />
+        <ShapeList />
         <Footer />
       </ApplicationDiv>
     );
@@ -39,9 +39,5 @@ const mapStateToProps = (state) => {
     filters: state.filters,
   };
 };
-
-// const mapDispatchToProps = (dispatch) => {
-//   return {};
-// };
 
 export default connect(mapStateToProps)(App);

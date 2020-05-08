@@ -11,7 +11,7 @@ const Body = styled.div`
   margin: 10px;
 `;
 
-class ShapesListFilters extends React.Component {
+class ShapeListFilters extends React.Component {
   render() {
     return (
       <Body>
@@ -42,4 +42,4 @@ const mapStateToProps = (state) => {
   };
 };
 
-export default connect(mapStateToProps)(ShapesListFilters);
+export default connect(mapStateToProps)(ShapeListFilters);

@@ -13,7 +13,7 @@ const H2 = styled.h2`
   color: #e63846;
 `;
 
-const ShapeList = (props) => {
+export const ShapeList = (props) => {
   return (
     <Body>
       <>
