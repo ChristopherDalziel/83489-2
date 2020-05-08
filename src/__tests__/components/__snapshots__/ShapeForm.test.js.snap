@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should render shape form correctly 1`] = `
+<Styled(div)>
+  <form
+    onSubmit={[Function]}
+  >
+    <input
+      autoFocus={true}
+      onChange={[Function]}
+      placeholder="Side One"
+      value=""
+    />
+    <input
+      disabled={true}
+      onChange={[Function]}
+      placeholder="Side Two"
+      value=""
+    />
+    <input
+      disabled={true}
+      onChange={[Function]}
+      placeholder="Side Three"
+      value=""
+    />
+    <input
+      disabled={true}
+      onChange={[Function]}
+      placeholder="Side Four"
+      value=""
+    />
+    <button>
+      Create new shape
+    </button>
+  </form>
+</Styled(div)>
+`;
