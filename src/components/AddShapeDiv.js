@@ -3,14 +3,20 @@ import { connect } from "react-redux";
 import ShapeForm from "./ShapeForm";
 import { addShape } from "../actions/shapes";
 
-const AddShapeDiv = (props) => {
-  return (
-    <ShapeForm
-      onSubmit={(shape) => {
-        props.dispatch(addShape(shape));
-      }}
-    />
-  );
+export class AddShapeDiv extends React.Component {
+  onSubmit = (shape) => {
+    this.props.addShape(shape);
+  };
+
+  render() {
+    return <ShapeForm onSubmit={this.onSubmit} />;
+  }
+}
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    addShape: (shape) => dispatch(addShape(shape)),
+  };
 };
 
-export default connect()(AddShapeDiv);
+export default connect(undefined, mapDispatchToProps)(AddShapeDiv);
