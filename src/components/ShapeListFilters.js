@@ -12,21 +12,20 @@ const Body = styled.div`
 `;
 
 class ShapeListFilters extends React.Component {
+  onSortChange = (e) => {
+    if (e.target.value === "Triangles") {
+      return this.props.sortByTriangles();
+    } else if (e.target.value === "Circles") {
+      return this.props.sortByCircles();
+    } else if (e.target.value === "Quadrilaterals") {
+      return this.props.sortByQuadrilaterals();
+    }
+  };
+
   render() {
     return (
       <Body>
-        <select
-          value={this.props.filters.sortBy}
-          onChange={(e) => {
-            if (e.target.value === "Triangles") {
-              return this.props.dispatch(sortByTriangles());
-            } else if (e.target.value === "Circles") {
-              return this.props.dispatch(sortByCircles());
-            } else if (e.target.value === "Quadrilaterals") {
-              return this.props.dispatch(sortByQuadrilaterals());
-            }
-          }}
-        >
+        <select value={this.props.filters.sortBy} onChange={this.onSortChange}>
           <option value="Triangles">Triangles</option>
           <option value="Circles">Circles</option>
           <option value="Quadrilaterals">Quadrilaterals</option>
@@ -42,4 +41,12 @@ const mapStateToProps = (state) => {
   };
 };
 
-export default connect(mapStateToProps)(ShapeListFilters);
+const mapDispatchToProps = (dispatch) => {
+  return {
+    sortByTriangles: () => dispatch(sortByTriangles()),
+    sortByCircles: () => dispatch(sortByCircles()),
+    sortByQuadrilaterals: () => dispatch(sortByQuadrilaterals()),
+  };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(ShapeListFilters);
