@@ -8,7 +8,7 @@ const Button = styled.button`
   margin: 10px 0px 0px 10px;
   width: 10vw;
   @media (max-width: 815px) {
-    width: 50vw;
+    width: 160px;
     text-align: left;
   }
 `;

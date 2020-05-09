@@ -15,6 +15,10 @@ const H2 = styled.h2`
 
 const NoShapesMessage = styled.p`
   color: #e63846;
+  @media (max-width: 815px) {
+    width: 100vw;
+    text-align: left;
+  }
 `;
 
 export const ShapeList = (props) => {
