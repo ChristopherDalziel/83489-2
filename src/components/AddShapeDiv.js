@@ -24,7 +24,27 @@ export class AddShapeDiv extends React.Component {
   };
 
   render() {
-    return <ShapeForm onSubmit={this.onSubmit} />;
+    return (
+      <>
+        {this.state.menuShown ? (
+          <Button
+            type="toggle"
+            onClick={() => this.setState({ menuShown: !this.state.menuShown })}
+          >
+            Cancel
+          </Button>
+        ) : (
+          <Button
+            type="toggle"
+            onClick={() => this.setState({ menuShown: !this.state.menuShown })}
+          >
+            Create your own shape
+          </Button>
+        )}
+
+        {this.state.menuShown ? <ShapeForm onSubmit={this.onSubmit} /> : ""}
+      </>
+    );
   }
 }
 

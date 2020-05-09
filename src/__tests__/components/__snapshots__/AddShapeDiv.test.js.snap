@@ -1,7 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Should render the AddShapeDiv correctly 1`] = `
-<ShapeForm
-  onSubmit={[Function]}
-/>
+<Fragment>
+  <Styled(button)
+    onClick={[Function]}
+    type="toggle"
+  >
+    Create your own shape
+  </Styled(button)>
+</Fragment>
 `;
