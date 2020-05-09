@@ -64,6 +64,7 @@ export class ShapeForm extends React.Component {
     }
   };
 
+  // Unsure if it's bad how I've handled the shapes within the submission
   onSubmit = (e) => {
     e.preventDefault();
     if (!this.state.sideOne) {
