@@ -9,8 +9,6 @@ const HeaderDiv = styled.div`
   height: 10vh;
   border-radius: 0px 0px 100px 0px;
   box-shadow: 17px 14px 17px -11px rgba(0, 0, 0, 0.2);
-  @media (max-width: 815px) {
-  }
 `;
 
 const H1 = styled.h1`

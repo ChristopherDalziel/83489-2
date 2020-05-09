@@ -7,6 +7,10 @@ import { addShape } from "../actions/shapes";
 const Button = styled.button`
   margin: 10px 0px 0px 10px;
   width: 10vw;
+  @media (max-width: 815px) {
+    width: 50vw;
+    text-align: left;
+  }
 `;
 
 export class AddShapeDiv extends React.Component {
