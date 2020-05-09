@@ -9,22 +9,35 @@ const HeaderDiv = styled.div`
   height: 10vh;
   border-radius: 0px 0px 100px 0px;
   box-shadow: 17px 14px 17px -11px rgba(0, 0, 0, 0.2);
+  @media (max-width: 815px) {
+  }
 `;
 
 const H1 = styled.h1`
   margin: 0;
   padding: 0px 10px 0px 10px;
   width: 30vw;
+  @media (max-width: 815px) {
+    font-size: 25px;
+    width: 75vw;
+  }
 `;
 
 const H3 = styled.h3`
   margin: 0;
   padding: 0px 10px 0px 10px;
+  @media (max-width: 815px) {
+    font-size: 12px;
+    width: 75vw;
+  }
 `;
 
 const LogoSmall = styled.img`
   height: 75px;
   float: right;
+  @media (max-width: 815px) {
+    height: 40px;
+  }
 `;
 
 const Header = (props) => {
