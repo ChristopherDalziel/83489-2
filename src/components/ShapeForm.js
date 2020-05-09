@@ -1,5 +1,11 @@
 import React from "react";
 import styled from "@emotion/styled";
+import { connect } from "react-redux";
+import {
+  sortByTriangles,
+  sortByCircles,
+  sortByQuadrilaterals,
+} from "../actions/filters";
 
 const FormContainer = styled.div`
   padding: 20px 10px 0px 10px;
@@ -9,7 +15,7 @@ const FormContainer = styled.div`
   }
 `;
 
-export default class ShapeForm extends React.Component {
+class ShapeForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -60,7 +66,6 @@ export default class ShapeForm extends React.Component {
 
   onSubmit = (e) => {
     e.preventDefault();
-
     if (!this.state.sideOne) {
       this.setState(() => ({
         error: "Please provide at least 'Side One' ",
@@ -80,6 +85,30 @@ export default class ShapeForm extends React.Component {
         sideTwo: this.state.sideTwo,
         sideThree: this.state.sideThree,
         sideFour: this.state.sideFour,
+
+        Circle: this.state.sideOne
+          ? this.props.sortByCircles() && this.state.sideOne
+          : "",
+
+        Triangle:
+          this.state.sideOne && this.state.sideTwo && this.state.sideThree
+            ? this.props.sortByTriangles() &&
+              this.state.sideOne &&
+              this.state.sideTwo &&
+              this.state.sideThree
+            : "",
+
+        Quadrilateral:
+          this.state.sideOne &&
+          this.state.sideTwo &&
+          this.state.sideThree &&
+          this.state.sideFour
+            ? this.props.sortByQuadrilaterals() &&
+              this.state.sideOne &&
+              this.state.sideTwo &&
+              this.state.sideThree &&
+              this.state.sideFour
+            : "",
       });
     }
   };
@@ -87,6 +116,10 @@ export default class ShapeForm extends React.Component {
   render() {
     return (
       <FormContainer>
+        <p>
+          Please enter your the lengths of each side of your shape within the
+          fields below.
+        </p>
         <form onSubmit={this.onSubmit}>
           {this.state.error && <p>{this.state.error}</p>}
           <input
@@ -119,3 +152,19 @@ export default class ShapeForm extends React.Component {
     );
   }
 }
+
+const mapStateToProps = (state) => {
+  return {
+    filters: state.filters,
+  };
+};
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    sortByTriangles: () => dispatch(sortByTriangles()),
+    sortByCircles: () => dispatch(sortByCircles()),
+    sortByQuadrilaterals: () => dispatch(sortByQuadrilaterals()),
+  };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(ShapeForm);
