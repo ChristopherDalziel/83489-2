@@ -1,5 +1,5 @@
 import React from "react";
-import { shallow } from "enzyme";
+import { mount } from "enzyme";
 import ShapeListItem from "../../components/ShapeListItem";
 import { Quadrilateral } from "../../components/ShapeListItem";
 import shapes from "../fixtures/shapes";
@@ -7,7 +7,7 @@ import shapes from "../fixtures/shapes";
 import toJSON from "enzyme-to-json";
 
 test("Should render shape list item with data", () => {
-  const wrapper = shallow(
+  const wrapper = mount(
     <ShapeListItem
       sideOne={shapes[0].sideOne}
       sideTwo={shapes[0].sideTwo}

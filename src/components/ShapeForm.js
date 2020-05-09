@@ -15,7 +15,7 @@ const FormContainer = styled.div`
   }
 `;
 
-class ShapeForm extends React.Component {
+export class ShapeForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {

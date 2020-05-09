@@ -1,7 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Should render shape list item with data 1`] = `
-<div>
-  <Styled(div) />
-</div>
+<ShapeListItem
+  sideOne={10}
+>
+  <div>
+    <Styled(div)>
+      <div
+        className="css-wamu4q"
+      />
+    </Styled(div)>
+  </div>
+</ShapeListItem>
 `;

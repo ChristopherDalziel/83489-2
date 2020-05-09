@@ -2,6 +2,9 @@
 
 exports[`Should render error for invalid form submission 1`] = `
 <Styled(div)>
+  <p>
+    Please enter your the lengths of each side of your shape within the fields below.
+  </p>
   <form
     onSubmit={[Function]}
   >
@@ -38,6 +41,9 @@ exports[`Should render error for invalid form submission 1`] = `
 
 exports[`Should render error for invalid form submission 2`] = `
 <Styled(div)>
+  <p>
+    Please enter your the lengths of each side of your shape within the fields below.
+  </p>
   <form
     onSubmit={[Function]}
   >
@@ -77,6 +83,9 @@ exports[`Should render error for invalid form submission 2`] = `
 
 exports[`Should render form with shape data 1`] = `
 <Styled(div)>
+  <p>
+    Please enter your the lengths of each side of your shape within the fields below.
+  </p>
   <form
     onSubmit={[Function]}
   >
@@ -110,6 +119,9 @@ exports[`Should render form with shape data 1`] = `
 
 exports[`Should render shape form correctly 1`] = `
 <Styled(div)>
+  <p>
+    Please enter your the lengths of each side of your shape within the fields below.
+  </p>
   <form
     onSubmit={[Function]}
   >

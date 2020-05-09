@@ -1,6 +1,6 @@
 import React from "react";
 import { shallow } from "enzyme";
-import ShapeForm from "../../components/ShapeForm";
+import { ShapeForm } from "../../components/ShapeForm";
 import shapes from "../fixtures/shapes";
 
 import toJSON from "enzyme-to-json";
@@ -109,8 +109,18 @@ test("Should not set sideFour if input is invalid", () => {
 
 test("Should call onSubmit prop for validation", () => {
   const onSubmitSpy = jest.fn();
+  const sortByCircles = jest.fn();
+  const sortByTriangles = jest.fn();
+  const sortByQuadrilaterals = jest.fn();
+
   const wrapper = shallow(
-    <ShapeForm shape={shapes[2]} onSubmit={onSubmitSpy} />
+    <ShapeForm
+      shape={shapes[2]}
+      onSubmit={onSubmitSpy}
+      sortByCircles={sortByCircles}
+      sortByTriangles={sortByTriangles}
+      sortByQuadrilaterals={sortByQuadrilaterals}
+    />
   );
   wrapper.find("form").simulate("submit", { preventDefault: () => {} });
   expect(wrapper.state("error")).toBe("");

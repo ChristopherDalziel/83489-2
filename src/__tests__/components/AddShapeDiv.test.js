@@ -17,6 +17,6 @@ test("Should render the AddShapeDiv correctly", () => {
 });
 
 test("Should handle onSubmit", () => {
-  wrapper.find("ShapeForm").prop("onSubmit")(shapes[1]);
+  wrapper.find("ShapeForm").at(0).prop("onSubmit")(shapes[1]);
   expect(addShape).toHaveBeenLastCalledWith(shapes[1]);
 });
