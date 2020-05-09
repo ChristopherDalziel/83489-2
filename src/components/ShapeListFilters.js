@@ -11,7 +11,7 @@ const Body = styled.div`
   margin: 10px;
 `;
 
-class ShapeListFilters extends React.Component {
+export class ShapeListFilters extends React.Component {
   onSortChange = (e) => {
     if (e.target.value === "Triangles") {
       return this.props.sortByTriangles();

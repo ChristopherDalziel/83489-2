@@ -1,0 +1,76 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should render ShapeListFilters with alternateFilterCircle data correctly 1`] = `
+<Styled(div)>
+  <select
+    onChange={[Function]}
+    value="Circles"
+  >
+    <option
+      value="Triangles"
+    >
+      Triangles
+    </option>
+    <option
+      value="Circles"
+    >
+      Circles
+    </option>
+    <option
+      value="Quadrilaterals"
+    >
+      Quadrilaterals
+    </option>
+  </select>
+</Styled(div)>
+`;
+
+exports[`Should render ShapeListFilters with alternateFilterQuadrilaterals data correctly 1`] = `
+<Styled(div)>
+  <select
+    onChange={[Function]}
+    value="Quadrilaterals"
+  >
+    <option
+      value="Triangles"
+    >
+      Triangles
+    </option>
+    <option
+      value="Circles"
+    >
+      Circles
+    </option>
+    <option
+      value="Quadrilaterals"
+    >
+      Quadrilaterals
+    </option>
+  </select>
+</Styled(div)>
+`;
+
+exports[`Should render ShapeListFilters with default filter correctly 1`] = `
+<Styled(div)>
+  <select
+    onChange={[Function]}
+    value="Triangles"
+  >
+    <option
+      value="Triangles"
+    >
+      Triangles
+    </option>
+    <option
+      value="Circles"
+    >
+      Circles
+    </option>
+    <option
+      value="Quadrilaterals"
+    >
+      Quadrilaterals
+    </option>
+  </select>
+</Styled(div)>
+`;
