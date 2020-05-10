@@ -1,6 +1,7 @@
 import React from "react";
 import { shallow } from "enzyme";
-import { AddShapeDiv } from "../../components/AddShapeDiv";
+import { AddShapeDiv, Button } from "../../components/AddShapeDiv";
+import ShapeForm from "../../components/ShapeForm";
 import shapes from "../fixtures/shapes";
 
 import toJSON from "enzyme-to-json";
@@ -16,8 +17,8 @@ test("Should render the AddShapeDiv correctly", () => {
   expect(toJSON(wrapper)).toMatchSnapshot();
 });
 
-// This tests failed because when it's called it is testing the connected form, if it's changed to the named import within the 'AddShapeDiv' the test passes but the app crashes.
 test("Should handle onSubmit", () => {
-  wrapper.find("ShapeForm").at(0).prop("onSubmit")(shapes[1]);
+  wrapper.find(Button).at(0).simulate("click");
+  wrapper.find(ShapeForm).at(0).prop("onSubmit")(shapes[1]);
   expect(addShape).toHaveBeenLastCalledWith(shapes[1]);
 });

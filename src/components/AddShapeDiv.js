@@ -4,7 +4,7 @@ import styled from "@emotion/styled";
 import ShapeForm from "./ShapeForm";
 import { addShape, resetShapes } from "../actions/shapes";
 
-const Button = styled.button`
+export const Button = styled.button`
   margin: 10px 0px 0px 10px;
   width: 10vw;
   @media (max-width: 815px) {

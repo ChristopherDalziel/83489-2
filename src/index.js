@@ -26,14 +26,12 @@ const store = configureStore();
 // store.dispatch(addShape({ sideOne: 25, sideTwo: 5, sideThree: 11 }));
 // // Quadrilaterals
 // store.dispatch(addShape({ sideOne: 3, sideTwo: 3, sideThree: 3, sideFour: 3 }));
-store.dispatch(
-  addShape({ sideOne: 50, sideTwo: 100, sideThree: 30, sideFour: 40 })
-);
+// store.dispatch(
+//   addShape({ sideOne: 50, sideTwo: 100, sideThree: 30, sideFour: 40 })
+// );
 
 // State
 const state = store.getState();
-
-console.log(state);
 
 sortShapes(state.shapes, state.filters);
 
