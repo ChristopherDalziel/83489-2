@@ -1,5 +1,5 @@
 import React from "react";
-import { mount } from "enzyme";
+import { shallow } from "enzyme";
 import { AddShapeDiv } from "../../components/AddShapeDiv";
 import shapes from "../fixtures/shapes";
 
@@ -9,7 +9,7 @@ let addShape, wrapper;
 
 beforeEach(() => {
   addShape = jest.fn();
-  wrapper = mount(<AddShapeDiv addShape={addShape} />);
+  wrapper = shallow(<AddShapeDiv addShape={addShape} />);
 });
 
 test("Should render the AddShapeDiv correctly", () => {

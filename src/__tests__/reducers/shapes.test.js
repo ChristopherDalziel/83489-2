@@ -20,3 +20,11 @@ test("Should add a new shape", () => {
   const state = shapesReducer(shapes, action);
   expect(state).toEqual([...shapes, shape]);
 });
+
+test("Should reset the data within the state", () => {
+  const action = {
+    type: "RESET_SHAPES",
+  };
+  const state = shapesReducer(shapes, action);
+  expect(state).toEqual([]);
+});
