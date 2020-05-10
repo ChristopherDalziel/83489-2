@@ -1,2 +1,3 @@
 npm i <br />
-npm start
+npm start <br />
+npm test
