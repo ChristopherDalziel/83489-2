@@ -33,6 +33,12 @@ const H3 = styled.h3`
 const LogoSmall = styled.img`
   height: 75px;
   float: right;
+  transition: transform 0.2s;
+  :hover {
+    -ms-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
   @media (max-width: 815px) {
     height: 40px;
   }
