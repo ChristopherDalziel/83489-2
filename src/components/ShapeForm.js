@@ -87,30 +87,46 @@ export class ShapeForm extends React.Component {
         sideThree: this.state.sideThree,
         sideFour: this.state.sideFour,
 
-        Circle: this.state.sideOne
-          ? this.props.sortByCircles() && this.state.sideOne
-          : "",
+        // Circle: this.state.sideOne
+        //   ? this.props.sortByCircles() && this.state.sideOne
+        //   : "",
 
-        Triangle:
-          this.state.sideOne && this.state.sideTwo && this.state.sideThree
-            ? this.props.sortByTriangles() &&
-              this.state.sideOne &&
-              this.state.sideTwo &&
-              this.state.sideThree
-            : "",
+        // Triangle:
+        //   this.state.sideOne && this.state.sideTwo && this.state.sideThree
+        //     ? this.props.sortByTriangles() &&
+        //       this.state.sideOne &&
+        //       this.state.sideTwo &&
+        //       this.state.sideThree
+        //     : "",
 
-        Quadrilateral:
-          this.state.sideOne &&
-          this.state.sideTwo &&
-          this.state.sideThree &&
-          this.state.sideFour
-            ? this.props.sortByQuadrilaterals() &&
-              this.state.sideOne &&
-              this.state.sideTwo &&
-              this.state.sideThree &&
-              this.state.sideFour
-            : "",
+        // Quadrilateral:
+        //   this.state.sideOne &&
+        //   this.state.sideTwo &&
+        //   this.state.sideThree &&
+        //   this.state.sideFour
+        //     ? this.props.sortByQuadrilaterals() &&
+        //       this.state.sideOne &&
+        //       this.state.sideTwo &&
+        //       this.state.sideThree &&
+        //       this.state.sideFour
+        //     : "",
       });
+      if (
+        this.state.sideOne &&
+        this.state.sideTwo &&
+        this.state.sideThree &&
+        this.state.sideFour
+      ) {
+        this.props.sortByQuadrilaterals();
+      } else if (
+        this.state.sideOne &&
+        this.state.sideTwo &&
+        this.state.sideThree
+      ) {
+        this.props.sortByTriangles();
+      } else if (this.state.sideOne) {
+        this.props.sortByCircles();
+      }
     }
   };
 
