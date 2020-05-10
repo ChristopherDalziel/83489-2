@@ -16,5 +16,15 @@ exports[`Should render the AddShapeDiv correctly 1`] = `
       Create your own shape
     </button>
   </Styled(button)>
+  <Styled(button)
+    onClick={[Function]}
+  >
+    <button
+      className="css-njncyf"
+      onClick={[Function]}
+    >
+      Reset
+    </button>
+  </Styled(button)>
 </AddShapeDiv>
 `;
