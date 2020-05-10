@@ -13,7 +13,7 @@ const H2 = styled.h2`
   color: #e63846;
 `;
 
-const NoShapesMessage = styled.p`
+const NoShapesMessage = styled.h2`
   color: #e63846;
   @media (max-width: 815px) {
     width: 100vw;
