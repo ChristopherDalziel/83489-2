@@ -12,3 +12,7 @@ export const addShape = ({
     sideFour,
   },
 });
+
+export const resetShapes = () => ({
+  type: "RESET_SHAPES",
+});

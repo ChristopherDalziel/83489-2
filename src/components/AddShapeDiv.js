@@ -2,7 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 import styled from "@emotion/styled";
 import ShapeForm from "./ShapeForm";
-import { addShape } from "../actions/shapes";
+import { addShape, resetShapes } from "../actions/shapes";
 
 const Button = styled.button`
   margin: 10px 0px 0px 10px;
@@ -21,6 +21,10 @@ export class AddShapeDiv extends React.Component {
   onSubmit = (shape) => {
     this.props.addShape(shape);
     this.setState({ menuShown: false });
+  };
+
+  resetApp = () => {
+    this.props.resetShapes();
   };
 
   render() {
@@ -42,6 +46,8 @@ export class AddShapeDiv extends React.Component {
           </Button>
         )}
 
+        <Button onClick={this.resetApp}>Reset</Button>
+
         {this.state.menuShown ? <ShapeForm onSubmit={this.onSubmit} /> : ""}
       </>
     );
@@ -51,6 +57,7 @@ export class AddShapeDiv extends React.Component {
 const mapDispatchToProps = (dispatch) => {
   return {
     addShape: (shape) => dispatch(addShape(shape)),
+    resetShapes: () => dispatch(resetShapes()),
   };
 };
 
