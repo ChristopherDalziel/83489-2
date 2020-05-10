@@ -35,9 +35,9 @@ const LogoSmall = styled.img`
   float: right;
   transition: transform 0.2s;
   :hover {
-    -ms-transform: scale(1.1);
-    -webkit-transform: scale(1.1);
-    transform: scale(1.1);
+    -ms-transform: scale(0.9);
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
   }
   @media (max-width: 815px) {
     height: 40px;
