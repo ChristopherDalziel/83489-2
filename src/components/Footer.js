@@ -11,6 +11,9 @@ const FooterDiv = styled.footer`
   justify-content: flex-end;
   padding: 2vh;
   font-size: 50px;
+  @media (max-width: 815px) {
+    border-radius: 0px;
+  }
 `;
 
 const Footer = () => {

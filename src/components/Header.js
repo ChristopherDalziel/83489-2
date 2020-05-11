@@ -6,21 +6,22 @@ const HeaderDiv = styled.header`
   padding: 0;
   margin: 0;
   background-color: #e63846;
-  height: 10vh;
+  height: 11vh;
   border-radius: 0px 0px 50px 0px;
   box-shadow: 17px 14px 17px -11px rgba(0, 0, 0, 0.2);
   @media (max-width: 815px) {
     border-radius: 0px;
     font-size: 25px;
-    width: 75vw;
+    height: 10vh;
   }
 `;
 
 const Title = styled.h1`
-  margin: 0;
+  margin: 0 0 5px 0;
   padding: 0px 10px 0px 10px;
   width: 30vw;
   @media (max-width: 815px) {
+    margin-bottom: 5px;
     font-size: 25px;
     width: 75vw;
   }
@@ -34,16 +35,15 @@ const SubTitle = styled.h2`
   padding: 5px 10px 5px 10px;
   border-radius: 0px 50px 50px 0px;
   @media (max-width: 815px) {
-    margin: 5px;
+    padding: 5px
     border-radius: 0px;
-    padding: 0px;
     font-size: 12px;
-    width: 75vw;
+    width: 100vw;
   }
 `;
 
 const LogoSmall = styled.img`
-  height: 75px;
+  height: 90px;
   float: right;
   transition: transform 0.2s;
   :hover {
