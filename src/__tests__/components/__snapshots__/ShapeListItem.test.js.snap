@@ -5,9 +5,14 @@ exports[`Should render shape list item with data 1`] = `
   sideOne={10}
 >
   <div>
-    <Styled(div)>
+    <Styled(div)
+      aria-readonly="true"
+      role="User created Circle"
+    >
       <div
-        className="css-wamu4q"
+        aria-readonly="true"
+        className="css-17rcfy7"
+        role="User created Circle"
       />
     </Styled(div)>
   </div>

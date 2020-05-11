@@ -6,7 +6,12 @@ exports[`Should render footer correctly 1`] = `
     class="fab fa-github-square socials"
     href="https://github.com/ChristopherDalziel/83489-2"
     id="footerLink"
+    rel="noopener noreferrer"
     target="_blank"
-  />
+  >
+    <span>
+      Link to projects GitHub repository
+    </span>
+  </a>
 </Styled(footer)>
 `;

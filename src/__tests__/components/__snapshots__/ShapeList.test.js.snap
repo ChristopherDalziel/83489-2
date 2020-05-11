@@ -2,9 +2,9 @@
 
 exports[`Should render shape list with empty message 1`] = `
 <Styled(div)>
-  <Styled(p)>
+  <Styled(h2)>
     No shapes to display
-  </Styled(p)>
+  </Styled(h2)>
 </Styled(div)>
 `;
 

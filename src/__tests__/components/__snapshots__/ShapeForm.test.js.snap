@@ -2,37 +2,66 @@
 
 exports[`Should render error for invalid form submission 1`] = `
 <Styled(div)>
-  <p>
-    Please enter your the lengths of each side of your shape within the fields below.
-  </p>
+  <Styled(p)>
+    Please enter your the lengths of each shape of the shape within the fields below, consider the lengths are been measured in pixels so you may want to use double digits to ensure your shape is visible!
+    <Styled(p)>
+      Then I will return your shape below, sorted into it's category!
+    </Styled(p)>
+  </Styled(p)>
   <form
     onSubmit={[Function]}
   >
+    <label
+      for="sideOne"
+    >
+      Side One:
+    </label>
     <input
       autoFocus={true}
+      id="sideOne"
       onChange={[Function]}
       placeholder="Side One"
       value=""
     />
+    <label
+      for="sideTwo"
+    >
+      Side Two:
+    </label>
     <input
       disabled={true}
+      id="sideTwo"
       onChange={[Function]}
       placeholder="Side Two"
       value=""
     />
+    <label
+      for="sideThree"
+    >
+      Side Three:
+    </label>
     <input
       disabled={true}
+      id="sideThree"
       onChange={[Function]}
       placeholder="Side Three"
       value=""
     />
+    <label
+      for="sideFour"
+    >
+      Side Four:
+    </label>
     <input
       disabled={true}
+      id="sideFour"
       onChange={[Function]}
       placeholder="Side Four"
       value=""
     />
-    <button>
+    <button
+      role="button"
+    >
       Create new shape
     </button>
   </form>
@@ -41,40 +70,69 @@ exports[`Should render error for invalid form submission 1`] = `
 
 exports[`Should render error for invalid form submission 2`] = `
 <Styled(div)>
-  <p>
-    Please enter your the lengths of each side of your shape within the fields below.
-  </p>
+  <Styled(p)>
+    Please enter your the lengths of each shape of the shape within the fields below, consider the lengths are been measured in pixels so you may want to use double digits to ensure your shape is visible!
+    <Styled(p)>
+      Then I will return your shape below, sorted into it's category!
+    </Styled(p)>
+  </Styled(p)>
   <form
     onSubmit={[Function]}
   >
     <p>
       Please provide at least 'Side One' 
     </p>
+    <label
+      for="sideOne"
+    >
+      Side One:
+    </label>
     <input
       autoFocus={true}
+      id="sideOne"
       onChange={[Function]}
       placeholder="Side One"
       value=""
     />
+    <label
+      for="sideTwo"
+    >
+      Side Two:
+    </label>
     <input
       disabled={true}
+      id="sideTwo"
       onChange={[Function]}
       placeholder="Side Two"
       value=""
     />
+    <label
+      for="sideThree"
+    >
+      Side Three:
+    </label>
     <input
       disabled={true}
+      id="sideThree"
       onChange={[Function]}
       placeholder="Side Three"
       value=""
     />
+    <label
+      for="sideFour"
+    >
+      Side Four:
+    </label>
     <input
       disabled={true}
+      id="sideFour"
       onChange={[Function]}
       placeholder="Side Four"
       value=""
     />
-    <button>
+    <button
+      role="button"
+    >
       Create new shape
     </button>
   </form>
@@ -83,34 +141,63 @@ exports[`Should render error for invalid form submission 2`] = `
 
 exports[`Should render form with shape data 1`] = `
 <Styled(div)>
-  <p>
-    Please enter your the lengths of each side of your shape within the fields below.
-  </p>
+  <Styled(p)>
+    Please enter your the lengths of each shape of the shape within the fields below, consider the lengths are been measured in pixels so you may want to use double digits to ensure your shape is visible!
+    <Styled(p)>
+      Then I will return your shape below, sorted into it's category!
+    </Styled(p)>
+  </Styled(p)>
   <form
     onSubmit={[Function]}
   >
+    <label
+      for="sideOne"
+    >
+      Side One:
+    </label>
     <input
       autoFocus={true}
+      id="sideOne"
       onChange={[Function]}
       placeholder="Side One"
       value={10}
     />
+    <label
+      for="sideTwo"
+    >
+      Side Two:
+    </label>
     <input
       disabled={false}
+      id="sideTwo"
       onChange={[Function]}
       placeholder="Side Two"
     />
+    <label
+      for="sideThree"
+    >
+      Side Three:
+    </label>
     <input
       disabled={true}
+      id="sideThree"
       onChange={[Function]}
       placeholder="Side Three"
     />
+    <label
+      for="sideFour"
+    >
+      Side Four:
+    </label>
     <input
       disabled={true}
+      id="sideFour"
       onChange={[Function]}
       placeholder="Side Four"
     />
-    <button>
+    <button
+      role="button"
+    >
       Create new shape
     </button>
   </form>
@@ -119,37 +206,66 @@ exports[`Should render form with shape data 1`] = `
 
 exports[`Should render shape form correctly 1`] = `
 <Styled(div)>
-  <p>
-    Please enter your the lengths of each side of your shape within the fields below.
-  </p>
+  <Styled(p)>
+    Please enter your the lengths of each shape of the shape within the fields below, consider the lengths are been measured in pixels so you may want to use double digits to ensure your shape is visible!
+    <Styled(p)>
+      Then I will return your shape below, sorted into it's category!
+    </Styled(p)>
+  </Styled(p)>
   <form
     onSubmit={[Function]}
   >
+    <label
+      for="sideOne"
+    >
+      Side One:
+    </label>
     <input
       autoFocus={true}
+      id="sideOne"
       onChange={[Function]}
       placeholder="Side One"
       value=""
     />
+    <label
+      for="sideTwo"
+    >
+      Side Two:
+    </label>
     <input
       disabled={true}
+      id="sideTwo"
       onChange={[Function]}
       placeholder="Side Two"
       value=""
     />
+    <label
+      for="sideThree"
+    >
+      Side Three:
+    </label>
     <input
       disabled={true}
+      id="sideThree"
       onChange={[Function]}
       placeholder="Side Three"
       value=""
     />
+    <label
+      for="sideFour"
+    >
+      Side Four:
+    </label>
     <input
       disabled={true}
+      id="sideFour"
       onChange={[Function]}
       placeholder="Side Four"
       value=""
     />
-    <button>
+    <button
+      role="button"
+    >
       Create new shape
     </button>
   </form>

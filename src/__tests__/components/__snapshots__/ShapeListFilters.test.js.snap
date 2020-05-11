@@ -2,7 +2,13 @@
 
 exports[`Should render ShapeListFilters with alternateFilterCircle data correctly 1`] = `
 <Styled(div)>
+  <label
+    for="listbox1"
+  >
+    Sorts shapes by the selected option
+  </label>
   <select
+    id="listbox1"
     onChange={[Function]}
     value="Circles"
   >
@@ -27,7 +33,13 @@ exports[`Should render ShapeListFilters with alternateFilterCircle data correctl
 
 exports[`Should render ShapeListFilters with alternateFilterQuadrilaterals data correctly 1`] = `
 <Styled(div)>
+  <label
+    for="listbox1"
+  >
+    Sorts shapes by the selected option
+  </label>
   <select
+    id="listbox1"
     onChange={[Function]}
     value="Quadrilaterals"
   >
@@ -52,7 +64,13 @@ exports[`Should render ShapeListFilters with alternateFilterQuadrilaterals data 
 
 exports[`Should render ShapeListFilters with default filter correctly 1`] = `
 <Styled(div)>
+  <label
+    for="listbox1"
+  >
+    Sorts shapes by the selected option
+  </label>
   <select
+    id="listbox1"
     onChange={[Function]}
     value="Triangles"
   >

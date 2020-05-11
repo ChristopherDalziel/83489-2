@@ -1,15 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Should render header correctly 1`] = `
-<Styled(div)>
+<Styled(header)>
   <Styled(h1)>
     Shape Sorter Online
     <Styled(img)
+      alt="Site logo"
       src="logo.png"
     />
   </Styled(h1)>
-  <Styled(h3)>
+  <Styled(h2)>
     Leave your shape sorting to a computer
-  </Styled(h3)>
-</Styled(div)>
+  </Styled(h2)>
+</Styled(header)>
 `;
