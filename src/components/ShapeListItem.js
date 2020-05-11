@@ -3,7 +3,7 @@ import styled from "@emotion/styled";
 import { Stage, Layer, Shape } from "react-konva";
 
 const ShapeListItem = ({ sideOne, sideTwo, sideThree, sideFour }) => {
-  const heightCalc = () => {
+  const stageHightCalc = () => {
     const longestSide = Math.max(sideOne, sideTwo, sideThree, sideFour);
     if (longestSide < 50) {
       return 30;
@@ -14,15 +14,15 @@ const ShapeListItem = ({ sideOne, sideTwo, sideThree, sideFour }) => {
 
   const Quadrilateral = () => {
     return (
-      <Stage width={window.innerWidth} height={heightCalc() * 5}>
+      <Stage width={window.innerWidth} height={stageHightCalc()}>
         <Layer>
           <Shape
             sceneFunc={(context, shape) => {
               context.beginPath();
               context.moveTo(100, 100); // placement within the canvas
-              context.lineTo(`${sideOne * 5}`, 100); // 1st value = top line
-              context.lineTo(`${sideThree * 5}`, `${sideTwo * 5}`); // 1st value = bottom line, 2nd value = right line
-              context.lineTo(100, `${sideFour * 5}`); // 2nd value = left line
+              context.lineTo(`${sideOne}`, 100); // 1st argument = Top line
+              context.lineTo(`${sideThree}`, `${sideTwo}`); // 1st argument = Bottom line, 2nd Value = Right line
+              context.lineTo(100, `${sideFour}`); // 2nd value = Left line
               context.lineTo(100, 100);
               context.closePath();
 
@@ -39,8 +39,8 @@ const ShapeListItem = ({ sideOne, sideTwo, sideThree, sideFour }) => {
 
   const Circle = styled.div`
     margin: 20px;
-    width: ${sideOne * 10}px;
-    height: ${sideOne * 10}px;
+    width: ${sideOne}px;
+    height: ${sideOne}px;
     background: black;
     border-radius: 50%;
   `;
@@ -49,9 +49,9 @@ const ShapeListItem = ({ sideOne, sideTwo, sideThree, sideFour }) => {
     margin: 20px;
     width: 0;
     height: 0;
-    border-bottom: ${sideOne * 10}px solid black;
-    border-left: ${sideTwo * 10}px solid transparent;
-    border-right: ${sideThree * 10}px solid transparent;
+    border-bottom: ${sideOne}px solid black;
+    border-left: ${sideTwo}px solid transparent;
+    border-right: ${sideThree}px solid transparent;
   `;
 
   return (

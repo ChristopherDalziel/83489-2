@@ -45,9 +45,7 @@ export class AddShapeDiv extends React.Component {
             Create your own shape
           </Button>
         )}
-
         <Button onClick={this.resetApp}>Reset</Button>
-
         {this.state.menuShown ? <ShapeForm onSubmit={this.onSubmit} /> : ""}
       </>
     );

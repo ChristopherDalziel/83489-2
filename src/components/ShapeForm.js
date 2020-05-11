@@ -15,6 +15,10 @@ const FormContainer = styled.div`
   }
 `;
 
+const Instructions = styled.p`
+  width: 50vw;
+`;
+
 export class ShapeForm extends React.Component {
   constructor(props) {
     super(props);
@@ -64,7 +68,6 @@ export class ShapeForm extends React.Component {
     }
   };
 
-  // Unsure if it's bad how I've handled the shapes within the submission
   onSubmit = (e) => {
     e.preventDefault();
     if (!this.state.sideOne) {
@@ -133,10 +136,13 @@ export class ShapeForm extends React.Component {
   render() {
     return (
       <FormContainer>
-        <p>
-          Please enter your the lengths of each side of your shape within the
-          fields below.
-        </p>
+        <Instructions>
+          Please enter your the lengths of each shape of the shape within the
+          fields below, consider the lengths are been measured in pixels so you
+          may want to use double digits to ensure your shape is visible! <br />{" "}
+          <br />
+          Then I will return your shape below, sorted into it's category!
+        </Instructions>
         <form onSubmit={this.onSubmit}>
           {this.state.error && <p>{this.state.error}</p>}
           <input
