@@ -113,33 +113,41 @@ export class ShapeForm extends React.Component {
   render() {
     return (
       <FormContainer>
-        <Instructions>
+        <Instructions
+          aria-readonly="true"
+          role="Instructions on how to use this website"
+        >
           Please enter your the lengths of each shape of the shape within the
           fields below, consider the lengths are been measured in pixels so you
-          may want to use double digits to ensure your shape is visible! <br />{" "}
-          <br />
-          Then I will return your shape below, sorted into it's category!
+          may want to use double digits to ensure your shape is visible!
+          <Instructions>
+            Then I will return your shape below, sorted into it's category!
+          </Instructions>
         </Instructions>
         <form onSubmit={this.onSubmit}>
           {this.state.error && <p>{this.state.error}</p>}
+          <label for="Shape Side One">Side One:</label>
           <input
             autoFocus
             onChange={this.onSideOneChange}
             value={this.state.sideOne}
             placeholder="Side One"
           ></input>
+          <label for="Shape Side Two">Side Two:</label>
           <input
             disabled={!this.state.sideOne ? true : false}
             onChange={this.onSideTwoChange}
             value={this.state.sideTwo}
             placeholder="Side Two"
           ></input>
+          <label for="Shape Side Three">Side Three:</label>
           <input
             disabled={!this.state.sideTwo ? true : false}
             onChange={this.onSideThreeChange}
             value={this.state.sideThree}
             placeholder="Side Three"
           ></input>
+          <label for="Shape Side Four">Side Four:</label>
           <input
             disabled={!this.state.sideThree ? true : false}
             onChange={this.onSideFourChange}

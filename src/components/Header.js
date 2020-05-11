@@ -2,7 +2,7 @@ import React from "react";
 import styled from "@emotion/styled";
 import logo from "../assets/logo.png";
 
-const HeaderDiv = styled.div`
+const HeaderDiv = styled.header`
   padding: 0;
   margin: 0;
   background-color: #e63846;
@@ -49,7 +49,7 @@ const Header = (props) => {
     <HeaderDiv>
       <H1>
         {props.title}
-        <LogoSmall src={logo} />
+        <LogoSmall src={logo} alt="Site logo" />
       </H1>
 
       {props.subTitle && <H3>{props.subTitle}</H3>}

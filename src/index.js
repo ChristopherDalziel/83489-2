@@ -9,7 +9,7 @@ import { Provider } from "react-redux";
 import configureStore from "./store/configureStore";
 
 // Actions
-import { addShape } from "./actions/shapes";
+// import { addShape } from "./actions/shapes";
 
 // Selector
 import sortShapes from "./selectors/shapes";

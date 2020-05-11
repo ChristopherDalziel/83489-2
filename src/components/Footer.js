@@ -19,9 +19,12 @@ const Footer = () => {
       <a
         target="_blank"
         href="https://github.com/ChristopherDalziel/83489-2"
+        rel="noopener noreferrer"
         class="fab fa-github-square socials"
         id="footerLink"
-      ></a>
+      >
+        <span>Link to projects GitHub repository</span>
+      </a>
     </FooterDiv>
   );
 };

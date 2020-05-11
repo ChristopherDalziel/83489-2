@@ -56,9 +56,15 @@ const ShapeListItem = ({ sideOne, sideTwo, sideThree, sideFour }) => {
 
   return (
     <div>
-      {sideOne && !sideTwo && <Circle />}
-      {sideTwo && sideTwo && sideThree && !sideFour && <Triangle />}
-      {sideTwo && sideTwo && sideThree && sideFour && <Quadrilateral />}
+      {sideOne && !sideTwo && (
+        <Circle aria-readonly="true" role="User created Circle" />
+      )}
+      {sideTwo && sideTwo && sideThree && !sideFour && (
+        <Triangle aria-readonly="true" role="User created Triangle" />
+      )}
+      {sideTwo && sideTwo && sideThree && sideFour && (
+        <Quadrilateral aria-readonly="true" role="User created Quadrilateral" />
+      )}
     </div>
   );
 };
