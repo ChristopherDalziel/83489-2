@@ -40,7 +40,7 @@ const LogoSmall = styled.img`
     transform: scale(0.9);
   }
   @media (max-width: 815px) {
-    height: 40px;
+    visibility: hidden;
   }
 `;
 
