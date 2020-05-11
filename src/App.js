@@ -7,7 +7,7 @@ import AddShapeDiv from "./components/AddShapeDiv";
 import Footer from "./components/Footer";
 import styled from "@emotion/styled";
 
-const ApplicationDiv = styled.div`
+const ApplicationDiv = styled.main`
   display: flex;
   flex-direction: column;
   height: 100vh;
@@ -23,12 +23,12 @@ class App extends React.Component {
 
   render(props) {
     return (
-      <ApplicationDiv>
-        <Header />
-        <AddShapeDiv />
-        <ShapeListFilters />
-        <ShapeList />
-        <Footer />
+      <ApplicationDiv role="main">
+        <Header role="banner" />
+        <AddShapeDiv role="main" />
+        <ShapeListFilters role="option" />
+        <ShapeList role="list" />
+        <Footer role="Footer" />
       </ApplicationDiv>
     );
   }

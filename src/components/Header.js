@@ -7,11 +7,16 @@ const HeaderDiv = styled.header`
   margin: 0;
   background-color: #e63846;
   height: 10vh;
-  border-radius: 0px 0px 100px 0px;
+  border-radius: 0px 0px 50px 0px;
   box-shadow: 17px 14px 17px -11px rgba(0, 0, 0, 0.2);
+  @media (max-width: 815px) {
+    border-radius: 0px;
+    font-size: 25px;
+    width: 75vw;
+  }
 `;
 
-const H1 = styled.h1`
+const Title = styled.h1`
   margin: 0;
   padding: 0px 10px 0px 10px;
   width: 30vw;
@@ -21,10 +26,17 @@ const H1 = styled.h1`
   }
 `;
 
-const H3 = styled.h3`
+const SubTitle = styled.h2`
   margin: 0;
-  padding: 0px 10px 0px 10px;
+  font-size: 1rem;
+  width: 20.75vw;
+  background-color: black;
+  padding: 5px 10px 5px 10px;
+  border-radius: 0px 50px 50px 0px;
   @media (max-width: 815px) {
+    margin: 5px;
+    border-radius: 0px;
+    padding: 0px;
     font-size: 12px;
     width: 75vw;
   }
@@ -47,12 +59,12 @@ const LogoSmall = styled.img`
 const Header = (props) => {
   return (
     <HeaderDiv>
-      <H1>
+      <Title>
         {props.title}
         <LogoSmall src={logo} alt="Site logo" />
-      </H1>
+      </Title>
 
-      {props.subTitle && <H3>{props.subTitle}</H3>}
+      {props.subTitle && <SubTitle>{props.subTitle}</SubTitle>}
     </HeaderDiv>
   );
 };

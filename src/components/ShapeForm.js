@@ -113,10 +113,7 @@ export class ShapeForm extends React.Component {
   render() {
     return (
       <FormContainer>
-        <Instructions
-          aria-readonly="true"
-          role="Instructions on how to use this website"
-        >
+        <Instructions>
           Please enter your the lengths of each shape of the shape within the
           fields below, consider the lengths are been measured in pixels so you
           may want to use double digits to ensure your shape is visible!
@@ -126,35 +123,39 @@ export class ShapeForm extends React.Component {
         </Instructions>
         <form onSubmit={this.onSubmit}>
           {this.state.error && <p>{this.state.error}</p>}
-          <label for="Shape Side One">Side One:</label>
+          <label for="sideOne">Side One:</label>
           <input
+            id="sideOne"
             autoFocus
             onChange={this.onSideOneChange}
             value={this.state.sideOne}
             placeholder="Side One"
           ></input>
-          <label for="Shape Side Two">Side Two:</label>
+          <label for="sideTwo">Side Two:</label>
           <input
+            id="sideTwo"
             disabled={!this.state.sideOne ? true : false}
             onChange={this.onSideTwoChange}
             value={this.state.sideTwo}
             placeholder="Side Two"
           ></input>
-          <label for="Shape Side Three">Side Three:</label>
+          <label for="sideThree">Side Three:</label>
           <input
+            id="sideThree"
             disabled={!this.state.sideTwo ? true : false}
             onChange={this.onSideThreeChange}
             value={this.state.sideThree}
             placeholder="Side Three"
           ></input>
-          <label for="Shape Side Four">Side Four:</label>
+          <label for="sideFour">Side Four:</label>
           <input
+            id="sideFour"
             disabled={!this.state.sideThree ? true : false}
             onChange={this.onSideFourChange}
             value={this.state.sideFour}
             placeholder="Side Four"
           ></input>
-          <button>Create new shape</button>
+          <button role="button">Create new shape</button>
         </form>
       </FormContainer>
     );

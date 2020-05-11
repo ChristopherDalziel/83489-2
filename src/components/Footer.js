@@ -5,7 +5,7 @@ const FooterDiv = styled.footer`
   margin-top: auto;
   height: 6vh;
   background-color: #e63846;
-  border-radius: 100px 0px 0px 0px;
+  border-radius: 50px 0px 0px 0px;
   display: flex;
   align-items: flex-end;
   justify-content: flex-end;

@@ -25,7 +25,12 @@ export class ShapeListFilters extends React.Component {
   render() {
     return (
       <Body>
-        <select value={this.props.filters.sortBy} onChange={this.onSortChange}>
+        <label for="listbox1">Sorts shapes by the selected option</label>
+        <select
+          id="listbox1"
+          value={this.props.filters.sortBy}
+          onChange={this.onSortChange}
+        >
           <option value="Triangles">Triangles</option>
           <option value="Circles">Circles</option>
           <option value="Quadrilaterals">Quadrilaterals</option>
