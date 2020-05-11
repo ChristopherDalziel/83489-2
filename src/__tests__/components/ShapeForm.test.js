@@ -107,6 +107,34 @@ test("Should not set sideFour if input is invalid", () => {
   expect(wrapper.state("sideFour")).toBe("");
 });
 
+test("Should not set sideOne if input is starts with 0", () => {
+  const value = "0.255";
+  const wrapper = shallow(<ShapeForm />);
+  wrapper.find("input").at(0).simulate("change", { target: { value } });
+  expect(wrapper.state("sideOne")).toBe("");
+});
+
+test("Should not set sideTwo if input is starts with 0", () => {
+  const value = "0.51";
+  const wrapper = shallow(<ShapeForm />);
+  wrapper.find("input").at(1).simulate("change", { target: { value } });
+  expect(wrapper.state("sideTwo")).toBe("");
+});
+
+test("Should not set sideThree if input is starts with 0", () => {
+  const value = "0.00";
+  const wrapper = shallow(<ShapeForm />);
+  wrapper.find("input").at(2).simulate("change", { target: { value } });
+  expect(wrapper.state("sideThree")).toBe("");
+});
+
+test("Should not set sideFour if input is starts with 0", () => {
+  const value = "00.55";
+  const wrapper = shallow(<ShapeForm />);
+  wrapper.find("input").at(0).simulate("change", { target: { value } });
+  expect(wrapper.state("sideFour")).toBe("");
+});
+
 test("Should call onSubmit prop for validation", () => {
   const onSubmitSpy = jest.fn();
   const sortByCircles = jest.fn();

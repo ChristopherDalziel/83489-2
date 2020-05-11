@@ -33,7 +33,7 @@ export class ShapeForm extends React.Component {
 
   onSideOneChange = (e) => {
     const sideOne = e.target.value;
-    if (!sideOne || sideOne.match(/^\d{1,}(\.\d{0,2})?$/)) {
+    if (!sideOne || sideOne.match(/^[1-9][0-9]*(\.\d{0,2})?$/)) {
       this.setState(() => {
         return { sideOne };
       });
@@ -42,7 +42,7 @@ export class ShapeForm extends React.Component {
 
   onSideTwoChange = (e) => {
     const sideTwo = e.target.value;
-    if (!sideTwo || sideTwo.match(/^\d{1,}(\.\d{0,2})?$/)) {
+    if (!sideTwo || sideTwo.match(/^[1-9][0-9]*(\.\d{0,2})?$/)) {
       this.setState(() => {
         return { sideTwo };
       });
@@ -51,7 +51,7 @@ export class ShapeForm extends React.Component {
 
   onSideThreeChange = (e) => {
     const sideThree = e.target.value;
-    if (!sideThree || sideThree.match(/^\d{1,}(\.\d{0,2})?$/)) {
+    if (!sideThree || sideThree.match(/^[1-9][0-9]*(\.\d{0,2})?$/)) {
       this.setState(() => {
         return { sideThree };
       });
@@ -61,7 +61,7 @@ export class ShapeForm extends React.Component {
   onSideFourChange = (e) => {
     const sideFour = e.target.value;
 
-    if (!sideFour || sideFour.match(/^\d{1,}(\.\d{0,2})?$/)) {
+    if (!sideFour || sideFour.match(/^[1-9][0-9]*(\.\d{0,2})?$/)) {
       this.setState(() => {
         return { sideFour };
       });
