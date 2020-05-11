@@ -8,7 +8,7 @@ import {
 } from "../actions/filters";
 
 const FormContainer = styled.div`
-  padding: 20px 10px 0px 10px;
+  padding: 0px 10px 0px 10px;
   color: black;
   @media (max-width: 815px) {
     width: 50vw;
