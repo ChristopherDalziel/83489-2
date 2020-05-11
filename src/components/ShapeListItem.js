@@ -14,7 +14,7 @@ const ShapeListItem = ({ sideOne, sideTwo, sideThree, sideFour }) => {
 
   const Quadrilateral = () => {
     return (
-      <Stage width={window.innerWidth} height={stageHightCalc()}>
+      <Stage width={window.innerWidth} height={stageHightCalc() * 5}>
         <Layer>
           <Shape
             sceneFunc={(context, shape) => {
