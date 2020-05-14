@@ -1,5 +1,36 @@
-npm i <br />
-npm start <br />
-npm test <br />
+# Shape Sorter Online - Leave your shape sorting in the hands of a computer
+
+[Deployed Site](https://shapesorteronline.netlify.app/)
+
+This application was made in response to the challenge 'Build an application that sorts the following shapes: Circles, Triangles and Quadrilaterals.
 <br />
-returns no issues from axe accessability extension
+In the future I may revisit it to create a deeper filter, which would return more shapes such as ovals, scalene triangles, etc.
+
+#### Tech
+
+- React
+- Redux
+- Konva
+- Enyzme
+- Enyzme to Json
+
+#### Command line inputs
+
+npm i <br />
+npm test <br />
+npm start <br />
+
+# Desktop Screenshots
+
+![image](src/assets/read_me/web-screen1.png)
+![image](src/assets/read_me/web-screen2.png)
+![image](src/assets/read_me/web-screen3.png)
+
+# Mobile Screenshots
+
+![image](src/assets/read_me/mob-screen2.jpeg)
+![image](src/assets/read_me/mob-screen1.jpeg)
+
+# Accessability
+
+![image](src/assets/read_me/axe-screen1.jpeg)
