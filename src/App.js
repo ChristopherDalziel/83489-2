@@ -5,6 +5,7 @@ import ShapeListFilters from "./components/ShapeListFilters";
 import Header from "./components/Header";
 import AddShapeDiv from "./components/AddShapeDiv";
 import Footer from "./components/Footer";
+// import { ShapesSummary } from "./components/ShapesSummary";
 import styled from "@emotion/styled";
 
 const ApplicationDiv = styled.main`
@@ -28,8 +29,9 @@ class App extends React.Component {
         <Header role="banner" />
         <AddShapeDiv role="main" />
         <ShapeListFilters role="option" />
+        {/* <ShapesSummary /> */}
         <ShapeList role="list" />
-        <Footer role="Footer" />
+        <Footer role="footer" />
       </ApplicationDiv>
     );
   }
